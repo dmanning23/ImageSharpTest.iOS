@@ -1,0 +1,6 @@
+[submodule "ImageSharp"]
+	path = ImageSharp
+	url = git@github.com:SixLabors/ImageSharp.git
+[submodule "Core"]
+	path = Core
+	url = git@github.com:SixLabors/Core.git

@@ -1,0 +1,930 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B9588FB-0B81-4006-850E-825F64989547}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{65C0771A-452F-423B-995C-F0AE46E643BA}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ImageSharpTest.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>ImageSharpTest.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <BundleResource Include="Resources\tab_about.png" />
+    <BundleResource Include="Resources\tab_about%402x.png" />
+    <BundleResource Include="Resources\tab_about%403x.png" />
+    <BundleResource Include="Resources\tab_feed.png" />
+    <BundleResource Include="Resources\tab_feed%402x.png" />
+    <BundleResource Include="Resources\tab_feed%403x.png" />
+    <BundleResource Include="Resources\xamarin_logo.png" />
+    <BundleResource Include="Resources\xamarin_logo%402x.png" />
+    <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ImageSharp\src\ImageSharp\ImageSharp.csproj">
+      <Project>{dae4e5a6-2e2b-4521-b944-cc6101dc1e8a}</Project>
+      <Name>ImageSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\9S.BMP">
+      <Link>Content\Bmp\9S.BMP</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\ba-bm.bmp">
+      <Link>Content\Bmp\ba-bm.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\BitmapCoreHeaderQR.bmp">
+      <Link>Content\Bmp\BitmapCoreHeaderQR.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\BITMAPV5HEADER.bmp">
+      <Link>Content\Bmp\BITMAPV5HEADER.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\Car.bmp">
+      <Link>Content\Bmp\Car.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\DIAMOND.BMP">
+      <Link>Content\Bmp\DIAMOND.BMP</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\F.bmp">
+      <Link>Content\Bmp\F.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\GMARBLE.BMP">
+      <Link>Content\Bmp\GMARBLE.BMP</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\invalidPaletteSize.bmp">
+      <Link>Content\Bmp\invalidPaletteSize.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\issue735.bmp">
+      <Link>Content\Bmp\issue735.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\neg_height.bmp">
+      <Link>Content\Bmp\neg_height.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal1.bmp">
+      <Link>Content\Bmp\pal1.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal1p1.bmp">
+      <Link>Content\Bmp\pal1p1.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal4.bmp">
+      <Link>Content\Bmp\pal4.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal4rle.bmp">
+      <Link>Content\Bmp\pal4rle.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal4rlecut.bmp">
+      <Link>Content\Bmp\pal4rlecut.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal4rletrns.bmp">
+      <Link>Content\Bmp\pal4rletrns.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8-0.bmp">
+      <Link>Content\Bmp\pal8-0.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8gs.bmp">
+      <Link>Content\Bmp\pal8gs.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8offs.bmp">
+      <Link>Content\Bmp\pal8offs.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8os2sp.bmp">
+      <Link>Content\Bmp\pal8os2sp.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8os2v1_winv2.bmp">
+      <Link>Content\Bmp\pal8os2v1_winv2.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8os2v2-16.bmp">
+      <Link>Content\Bmp\pal8os2v2-16.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8os2v2.bmp">
+      <Link>Content\Bmp\pal8os2v2.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8oversizepal.bmp">
+      <Link>Content\Bmp\pal8oversizepal.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8rlecut.bmp">
+      <Link>Content\Bmp\pal8rlecut.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8rletrns.bmp">
+      <Link>Content\Bmp\pal8rletrns.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8v4.bmp">
+      <Link>Content\Bmp\pal8v4.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\pal8v5.bmp">
+      <Link>Content\Bmp\pal8v5.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\PINES.BMP">
+      <Link>Content\Bmp\PINES.BMP</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb16-565.bmp">
+      <Link>Content\Bmp\rgb16-565.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb16-565pal.bmp">
+      <Link>Content\Bmp\rgb16-565pal.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb16.bmp">
+      <Link>Content\Bmp\rgb16.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb16bfdef.bmp">
+      <Link>Content\Bmp\rgb16bfdef.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb24.bmp">
+      <Link>Content\Bmp\rgb24.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb24jpeg.bmp">
+      <Link>Content\Bmp\rgb24jpeg.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb24largepal.bmp">
+      <Link>Content\Bmp\rgb24largepal.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb24png.bmp">
+      <Link>Content\Bmp\rgb24png.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb24rle24.bmp">
+      <Link>Content\Bmp\rgb24rle24.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb32.bmp">
+      <Link>Content\Bmp\rgb32.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb32bf.bmp">
+      <Link>Content\Bmp\rgb32bf.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb32bfdef.bmp">
+      <Link>Content\Bmp\rgb32bfdef.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgb32h52.bmp">
+      <Link>Content\Bmp\rgb32h52.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgba32-1010102.bmp">
+      <Link>Content\Bmp\rgba32-1010102.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgba32.bmp">
+      <Link>Content\Bmp\rgba32.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgba32abf.bmp">
+      <Link>Content\Bmp\rgba32abf.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgba32h56.bmp">
+      <Link>Content\Bmp\rgba32h56.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rgba32v4.bmp">
+      <Link>Content\Bmp\rgba32v4.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rle24rlecut.bmp">
+      <Link>Content\Bmp\rle24rlecut.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rle24rletrns.bmp">
+      <Link>Content\Bmp\rle24rletrns.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rle4-delta-320x240.bmp">
+      <Link>Content\Bmp\rle4-delta-320x240.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rle8-blank-160x120.bmp">
+      <Link>Content\Bmp\rle8-blank-160x120.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\rle8-delta-320x240.bmp">
+      <Link>Content\Bmp\rle8-delta-320x240.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\RunLengthEncoded-inverted.bmp">
+      <Link>Content\Bmp\RunLengthEncoded-inverted.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\RunLengthEncoded.bmp">
+      <Link>Content\Bmp\RunLengthEncoded.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\SKATER.BMP">
+      <Link>Content\Bmp\SKATER.BMP</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\SPADE.BMP">
+      <Link>Content\Bmp\SPADE.BMP</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\SUNFLOW.BMP">
+      <Link>Content\Bmp\SUNFLOW.BMP</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\test16-inverted.bmp">
+      <Link>Content\Bmp\test16-inverted.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\test16.bmp">
+      <Link>Content\Bmp\test16.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\test8-inverted.bmp">
+      <Link>Content\Bmp\test8-inverted.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\test8.bmp">
+      <Link>Content\Bmp\test8.bmp</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Bmp\WARPD.BMP">
+      <Link>Content\Bmp\WARPD.BMP</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\base_1x4.gif">
+      <Link>Content\Gif\base_1x4.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\base_4x1.gif">
+      <Link>Content\Gif\base_4x1.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\cheers.gif">
+      <Link>Content\Gif\cheers.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\giphy.gif">
+      <Link>Content\Gif\giphy.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\issues\issue403_baddescriptorwidth.gif">
+      <Link>Content\Gif\Issues\issue403_baddescriptorwidth.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\issues\issue405_badappextlength252-2.gif">
+      <Link>Content\Gif\Issues\issue405_badappextlength252-2.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\issues\issue405_badappextlength252.gif">
+      <Link>Content\Gif\Issues\issue405_badappextlength252.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\kumin.gif">
+      <Link>Content\Gif\kumin.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\leo.gif">
+      <Link>Content\Gif\leo.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\rings.gif">
+      <Link>Content\Gif\rings.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Gif\trans.gif">
+      <Link>Content\Gif\trans.gif</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\AsianCarvingLowContrast.jpg">
+      <Link>Content\Jpg\baseline\AsianCarvingLowContrast.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\badeof.jpg">
+      <Link>Content\Jpg\baseline\badeof.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\badrst.jpg">
+      <Link>Content\Jpg\baseline\badrst.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\Calliphora.jpg">
+      <Link>Content\Jpg\baseline\Calliphora.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\cmyk.jpg">
+      <Link>Content\Jpg\baseline\cmyk.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\exif.jpg">
+      <Link>Content\Jpg\baseline\exif.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\Floorplan.jpg">
+      <Link>Content\Jpg\baseline\Floorplan.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\gamma_dalai_lama_gray.jpg">
+      <Link>Content\Jpg\baseline\gamma_dalai_lama_gray.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\Hiyamugi.jpg">
+      <Link>Content\Jpg\baseline\Hiyamugi.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\jpeg400jfif.jpg">
+      <Link>Content\Jpg\baseline\jpeg400jfif.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\jpeg420exif.jpg">
+      <Link>Content\Jpg\baseline\jpeg420exif.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\jpeg420small.jpg">
+      <Link>Content\Jpg\baseline\jpeg420small.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\jpeg444.jpg">
+      <Link>Content\Jpg\baseline\jpeg444.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\Lake.jpg">
+      <Link>Content\Jpg\baseline\Lake.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\MultiScanBaselineCMYK.jpg">
+      <Link>Content\Jpg\baseline\MultiScanBaselineCMYK.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\ratio-1x1.jpg">
+      <Link>Content\Jpg\baseline\ratio-1x1.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\Snake.jpg">
+      <Link>Content\Jpg\baseline\Snake.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\testimgint.jpg">
+      <Link>Content\Jpg\baseline\testimgint.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\testorig.jpg">
+      <Link>Content\Jpg\baseline\testorig.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\testorig12.jpg">
+      <Link>Content\Jpg\baseline\testorig12.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\turtle.jpg">
+      <Link>Content\Jpg\baseline\turtle.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\ycck.jpg">
+      <Link>Content\Jpg\baseline\ycck.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\baseline\ycck-subsample-1222.jpg">
+      <Link>Content\Jpg\baseline\ycck-subsample-1222.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue159-MissingFF00-Progressive-Bedroom.jpg">
+      <Link>Content\Jpg\issues\Issue159-MissingFF00-Progressive-Bedroom.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue159-MissingFF00-Progressive-Girl.jpg">
+      <Link>Content\Jpg\issues\Issue159-MissingFF00-Progressive-Girl.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue178-BadCoeffsProgressive-Lemon.jpg">
+      <Link>Content\Jpg\issues\Issue178-BadCoeffsProgressive-Lemon.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue214-CriticalEOF.jpg">
+      <Link>Content\Jpg\issues\Issue214-CriticalEOF.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue385-BadZigZag-Progressive.jpg">
+      <Link>Content\Jpg\issues\Issue385-BadZigZag-Progressive.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue394-MultiHuffmanBaseline-Speakers.jpg">
+      <Link>Content\Jpg\issues\Issue394-MultiHuffmanBaseline-Speakers.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue517-No-EOI-Progressive.jpg">
+      <Link>Content\Jpg\issues\Issue517-No-EOI-Progressive.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue518-Bad-RST-Progressive.jpg">
+      <Link>Content\Jpg\issues\Issue518-Bad-RST-Progressive.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue520-InvalidCast.jpg">
+      <Link>Content\Jpg\issues\Issue520-InvalidCast.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue624-DhtHasWrongLength-Progressive-N.jpg">
+      <Link>Content\Jpg\issues\Issue624-DhtHasWrongLength-Progressive-N.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue694-Decode-Exif-OutOfRange.jpg">
+      <Link>Content\Jpg\issues\Issue694-Decode-Exif-OutOfRange.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue695-Invalid-EOI.jpg">
+      <Link>Content\Jpg\issues\Issue695-Invalid-EOI.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue696-Resize-Exif-OutOfRange.jpg">
+      <Link>Content\Jpg\issues\Issue696-Resize-Exif-OutOfRange.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue721-InvalidAPP0.jpg">
+      <Link>Content\Jpg\issues\Issue721-InvalidAPP0.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue723-Ordered-Interleaved-Progressive-A.jpg">
+      <Link>Content\Jpg\issues\Issue723-Ordered-Interleaved-Progressive-A.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue723-Ordered-Interleaved-Progressive-B.jpg">
+      <Link>Content\Jpg\issues\Issue723-Ordered-Interleaved-Progressive-B.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue723-Ordered-Interleaved-Progressive-C.jpg">
+      <Link>Content\Jpg\issues\Issue723-Ordered-Interleaved-Progressive-C.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\issue750-exif-load.jpg">
+      <Link>Content\Jpg\issues\issue750-exif-load.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\issue750-exif-tranform.jpg">
+      <Link>Content\Jpg\issues\issue750-exif-tranform.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\Issue845-Incorrect-Quality99.jpg">
+      <Link>Content\Jpg\issues\Issue845-Incorrect-Quality99.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\issues\issue855-incorrect-colorspace.jpg">
+      <Link>Content\Jpg\issues\issue855-incorrect-colorspace.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\banner7-adam.png">
+      <Link>Content\Png\banner7-adam.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\banner8-index.png">
+      <Link>Content\Png\banner8-index.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\big-corrupted-chunk.png">
+      <Link>Content\Png\big-corrupted-chunk.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\Bike.png">
+      <Link>Content\Png\Bike.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\BikeGrayscale.png">
+      <Link>Content\Png\BikeGrayscale.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\blur.png">
+      <Link>Content\Png\blur.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\bpp1.png">
+      <Link>Content\Png\bpp1.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\CalliphoraPartial.png">
+      <Link>Content\Png\CalliphoraPartial.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\CalliphoraPartialGrayscale.png">
+      <Link>Content\Png\CalliphoraPartialGrayscale.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\chunklength1.png">
+      <Link>Content\Png\chunklength1.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\chunklength2.png">
+      <Link>Content\Png\chunklength2.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\cross.png">
+      <Link>Content\Png\cross.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\ducky.png">
+      <Link>Content\Png\ducky.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\filter0.png">
+      <Link>Content\Png\filter0.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\filter1.png">
+      <Link>Content\Png\filter1.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\filter2.png">
+      <Link>Content\Png\filter2.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\filter3.png">
+      <Link>Content\Png\filter3.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\filter4.png">
+      <Link>Content\Png\filter4.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\filterVar.png">
+      <Link>Content\Png\filterVar.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray_4bpp.png">
+      <Link>Content\Png\gray_4bpp.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray-1-trns.png">
+      <Link>Content\Png\gray-1-trns.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray-2-tRNS.png">
+      <Link>Content\Png\gray-2-tRNS.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray-4-tRNS.png">
+      <Link>Content\Png\gray-4-tRNS.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray-8-tRNS.png">
+      <Link>Content\Png\gray-8-tRNS.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray-16.png">
+      <Link>Content\Png\gray-16.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray-16-tRNS-interlaced.png">
+      <Link>Content\Png\gray-16-tRNS-interlaced.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray-alpha-8.png">
+      <Link>Content\Png\gray-alpha-8.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\gray-alpha-16.png">
+      <Link>Content\Png\gray-alpha-16.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\icon.png">
+      <Link>Content\Png\icon.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\iftbbn0g01.png">
+      <Link>Content\Png\iftbbn0g01.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\iftbbn0g02.png">
+      <Link>Content\Png\iftbbn0g02.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\iftbbn0g04.png">
+      <Link>Content\Png\iftbbn0g04.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\indexed.png">
+      <Link>Content\Png\indexed.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\interlaced.png">
+      <Link>Content\Png\interlaced.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\kaboom.png">
+      <Link>Content\Png\kaboom.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\low-variance.png">
+      <Link>Content\Png\low-variance.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\palette-8bpp.png">
+      <Link>Content\Png\palette-8bpp.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\pd.png">
+      <Link>Content\Png\pd.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\pd-dest.png">
+      <Link>Content\Png\pd-dest.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\pd-source.png">
+      <Link>Content\Png\pd-source.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\pl.png">
+      <Link>Content\Png\pl.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\pp.png">
+      <Link>Content\Png\pp.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\rainbow.png">
+      <Link>Content\Png\rainbow.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\ratio-1x4.png">
+      <Link>Content\Png\ratio-1x4.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\ratio-4x1.png">
+      <Link>Content\Png\ratio-4x1.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\rgb-8-tRNS.png">
+      <Link>Content\Png\rgb-8-tRNS.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\rgb-16-alpha.png">
+      <Link>Content\Png\rgb-16-alpha.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\rgb-16-tRNS.png">
+      <Link>Content\Png\rgb-16-tRNS.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\rgb-48bpp.png">
+      <Link>Content\Png\rgb-48bpp.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\rgb-48bpp-interlaced.png">
+      <Link>Content\Png\rgb-48bpp-interlaced.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\rollsroyce.png">
+      <Link>Content\Png\rollsroyce.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\SnakeGame.png">
+      <Link>Content\Png\SnakeGame.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\splash.png">
+      <Link>Content\Png\splash.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\splash-interlaced.png">
+      <Link>Content\Png\splash-interlaced.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\versioning-1_2.png">
+      <Link>Content\Png\versioning-1_2.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\vim16x16_1.png">
+      <Link>Content\Png\vim16x16_1.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\vim16x16_2.png">
+      <Link>Content\Png\vim16x16_2.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\zlib-overflow.png">
+      <Link>Content\Png\zlib-overflow.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Png\zlib-overflow2.png">
+      <Link>Content\Png\zlib-overflow2.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\progressive\BadEofProgressive.jpg">
+      <Link>Content\Jpg\progressive\BadEofProgressive.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\progressive\ExifUndefType.jpg">
+      <Link>Content\Jpg\progressive\ExifUndefType.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\progressive\fb.jpg">
+      <Link>Content\Jpg\progressive\fb.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\progressive\Festzug.jpg">
+      <Link>Content\Jpg\progressive\Festzug.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\ImageSharp\tests\Images\Input\Jpg\progressive\progress.jpg">
+      <Link>Content\Jpg\progressive\progress.jpg</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\ImageSharpTest\ImageSharpTest.csproj">
+      <Project>{15026548-3B68-42AB-B6E4-303B7DDBDE22}</Project>
+      <Name>ImageSharpTest</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
